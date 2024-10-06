@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://bpg52u1coyfyi"]
+
+[ext_resource type="PackedScene" uid="uid://boblauvjv14av" path="res://Scenes/world.tscn" id="1_3aioo"]
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_o4gbo"]
+[ext_resource type="PackedScene" uid="uid://cop4kg43syrba" path="res://painting_spawner.tscn" id="5_s2r1k"]
+[ext_resource type="Texture2D" uid="uid://cnrkoxur5ixub" path="res://assets/Wall Art/wallArt_list_0022_Layer-12.png" id="7_iu4tm"]
+[ext_resource type="PackedScene" uid="uid://dljio6rs770s3" path="res://Scenes/player.tscn" id="8_la20m"]
+[ext_resource type="Texture2D" uid="uid://cpydlsd2a0ngg" path="res://assets/Wall Art/wallArt_list_0003_Layer-7.png" id="9_3c6fn"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_o4gbo")
+
+[node name="World" parent="." instance=ExtResource("1_3aioo")]
+
+[node name="Player" parent="." instance=ExtResource("8_la20m")]
+motion_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_top = 0
+limit_bottom = 650
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="PaintingSpawner" parent="." instance=ExtResource("5_s2r1k")]
+painting_textures = [ExtResource("9_3c6fn"), ExtResource("7_iu4tm")]

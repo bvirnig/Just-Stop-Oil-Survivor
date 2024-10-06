@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cop4kg43syrba"]
+
+[ext_resource type="Script" path="res://painting_spawner.gd" id="1_ftis5"]
+[ext_resource type="PackedScene" uid="uid://dajbf37652tff" path="res://Scenes/painting.tscn" id="2_f1rap"]
+
+[node name="PaintingSpawner" type="Node2D"]
+script = ExtResource("1_ftis5")
+painting_scene = ExtResource("2_f1rap")
